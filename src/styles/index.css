@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest-green: #17352F;
+  --dark-olive: #30483F;
+  --warm-ivory: #F5F2EA;
+  --soft-stone: #D9D5CA;
+  --muted-copper: #B77A55;
+  --deep-charcoal: #202522;
+  --warm-white: #FAF9F5;
+}
+
+/* Material Symbols configuration */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+::selection {
+  background-color: #B77A55;
+  color: #FAF9F5;
+}
+
+/* Architectural Hairlines */
+.hairline-b { border-bottom: 1px solid #D9D5CA; }
+.hairline-t { border-top: 1px solid #D9D5CA; }
+.hairline-r { border-right: 1px solid #D9D5CA; }
+.hairline-l { border-left: 1px solid #D9D5CA; }
+.hairline-all { border: 1px solid #D9D5CA; }
+
+/* Smooth image zoom container */
+.img-zoom-parent {
+  overflow: hidden;
+}
+.img-zoom-parent img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-parent:hover img {
+  transform: scale(1.03);
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
